@@ -1,11 +1,5 @@
 const getUsersWithFriend = (users, friendName) => {
-    if (friendName === "Briana Decker") {
-        return users.filter(user => ["Sharlene Bush", "Sheree Anthony"].includes(user.name));
-    } else if (friendName === "Goldie Gentry") {
-        return users.filter(user => ["Elma Head", "Sheree Anthony"].includes(user.name));
-    } else if (friendName === "Adrian Cross") {
-        return [];
-    }
+   return users.filter(user => user.friends.includes(friendName));
 };
    
 const allUsers = [
